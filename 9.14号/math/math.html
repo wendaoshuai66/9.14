@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>math</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+    /*
+    取绝对值
+     */
+	console.log(Math.abs(-12))
+	/*
+	取近似值  四舍五入
+	 */
+	console.log(Math.round(10.5))
+	console.log(Math.round(0.45))
+	console.log(Math.round(-0.45))
+	console.log(Math.round(10.05))
+	console.log(Math.round(-10.7))
+	/*
+	向上取整
+	 */
+	console.log(Math.ceil(10.5))
+	console.log(Math.ceil(-10.4))
+	console.log(Math.ceil(5.3))
+	console.log(Math.ceil(-5.5))
+	/*
+	向下取整
+	 */
+	console.log(Math.floor(10.5))
+	console.log(Math.floor(0.5))
+	console.log(Math.floor(-0.5))
+	/*
+	随机数  每次都是随机 
+	随机数变化范围Math.random()*范围之间长度+平移距离
+	 */
+	for(let i=0;i<10;i++){
+		/*console.log(Math.random()*10)*/     /*随机数0到10*/
+		/*console.log(Math.random())*/        /*随机数0到1*/
+		// 10~20
+		console.log(Math.random()*10+10)
+	}
+	/*
+	Math.pow(x,y) x的y方
+	 */
+	console.log(Math.pow(2,3))
+	/*
+	sqrt 开方
+	 */
+	console.log(Math.sqrt(9))
+</script>

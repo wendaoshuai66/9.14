@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*let arr=[1,2,3,4]
+	let arr1=['x','y','z']*/
+    /*console.log(arr.unshift('a','b','c')) 
+    console.log(arr)
+    console.log(arr.pop())
+    console.log(arr)
+    console.log(arr.shift())*/
+    // console.log(arr.splice(2,0,6,6,6))
+   // console.log( arr.concat(arr1))
+   // console.log(arr.reverse())    对原数组产生影响
+   // console.log(arr.join())          对原数组没产生影响
+   // let arr=[12,8,6,1,30,3,66,102,72];
+   /*console.log(arr.sort())*/
+   /*let ou=[];
+    arr.forEach(function(value,index){
+   	if(value%2==0){
+   		ou.push(value);
+   	}
+   })
+   console.log(ou)*/
+  /* let newarr=arr.filter(function(value) {
+   	return value%2==0;
+   });*/
+   /*let newarr=arr.map((value,index) => {return value+index}
+   	)
+   console.log(newarr)
+   console.log(arr)*/
+
+   // let arr=[1,6,2,6,3,4,5,1,2,3];
+    /*
+    去重
+     */
+    /*
+    arr ->newarr
+    判断新数组   ————>arr[i]
+    放
+    newarr
+     */
+    // console.log(quchong(arr));
+  /*  function quchong(arr){
+    	let newarr=[];
+    	for(let i=0;i<arr.length;i++){
+    		if(!(newarr.includes(arr[i]))){
+    			newarr.push(arr[i]);
+    		}
+    		
+    	} 
+    	return newarr;
+    }*/
+    /*
+    数组去重第二种方法
+
+     */
+    Array.prototype.quchong=function(){
+    	let newarr=[];
+    	for(var i=0;i<this.length;i<i++){
+    		let flag=true;
+    		for(var j=i+1;j<this.length;j++){
+    			if(this[i]==this[j]){
+    			flag=false;
+    			break;
+    		}
+    			}
+    	if(flag){
+    				newarr.push(this[i]);
+    			}
+    		}
+    	return newarr;
+    }
+    /*console.log(arr.quchong())*/
+    let arr=['a','b','c','d','e'];
+    /*
+    Math.floor(Math.random()*arr.length)
+     */
+  /*  function Find(arr,num){
+    	let newarr=[];
+    	for(let i=0;i<num;i++){
+    		let index=Math.floor(Math.random()*arr.length)
+    		
+
+            while(newarr.includes(arr[index])){
+            	 index=Math.floor(Math.random()*arr.length)
+            }
+            newarr.push(arr[index]);    
+    	}
+
+    	return newarr;
+    }*/
+    console.log(Find(arr,4))
+    function Find(arr,num){
+    	let newarr=[];
+    	while(newarr.length<num){
+    		let index=Math.floor(Math.random()*arr.length)
+    		if(newarr.includes(arr[index])){
+    			continue;
+    		   
+    		}
+    		 newarr.push(arr[index])
+    	}
+    	return newarr;
+    }
+    </script>
